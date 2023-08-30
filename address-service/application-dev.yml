@@ -1,2 +1,13 @@
 server:
   port: 8001
+
+spring:
+  datasource:
+      url: jdbc:postgresql://localhost:5433/address_service
+      username: postgres
+      password: root
+      
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
