@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: discovery-service
+          uri: lb://discovery-service
+          predicates:
+            - Path=/discovery-service/**
+          filters:
+            - StripPrefix=1
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/v1/users/**
+        - id: address-service
+          uri: lb://address-service
+          predicates:
+            - Path=/api/v1/address/**
