@@ -13,7 +13,14 @@ logging:
       springframework:
         cloud:
           gateway: TRACE
-          
+       
 spring:
-  config:
-    import: classpath:/gateway-routes.yml
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: custom-routes
+          uri: classpath:/gateway-routes.yml
+ 
