@@ -16,5 +16,4 @@ logging:
           
 spring:
   config:
-    import:
-      - "https://raw.githubusercontent.com/nish22ant/invest-configs/gateway/gateway-routes.yml"
+    import: classpath:/gateway-routes.yml
