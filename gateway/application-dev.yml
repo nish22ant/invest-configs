@@ -6,21 +6,20 @@ management:
   endpoint:
     gateway:
       enabled: true
-      
+
 logging:
   level:
     org:
       springframework:
         cloud:
           gateway: TRACE
-       
+
 spring:
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: custom-routes
-          uri: classpath:/gateway-routes.yml
- 
+
+  config:
+    import: gateway-routes.yml
