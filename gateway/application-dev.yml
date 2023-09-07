@@ -1,4 +1,7 @@
 management:
+  tracing:
+    sampling:
+      probability: 1.0
   endpoints:
     web:
       exposure:
@@ -13,7 +16,6 @@ logging:
       springframework:
         cloud:
           gateway: TRACE
-
 spring:
   cloud:
     gateway:
