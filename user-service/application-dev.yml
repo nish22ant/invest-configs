@@ -22,8 +22,18 @@ spring:
   config:
     import:
     - "https://raw.githubusercontent.com/nish22ant/invest-configs/user-service/resilience4j.yml"
+
 management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    gateway:
+      enabled: true
