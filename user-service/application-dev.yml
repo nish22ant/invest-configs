@@ -15,9 +15,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  config:
-    import:
-    - "https://raw.githubusercontent.com/nish22ant/invest-configs/user-service/resilience4j.yml"
 
 management:
   tracing:
