@@ -3,6 +3,9 @@ server:
       
       
 spring:
+  config:
+    import: resilience4j.yml
+      
   datasource:
       url: jdbc:postgresql://localhost:5432/user_service
       username: postgres
