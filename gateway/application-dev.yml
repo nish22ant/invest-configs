@@ -15,9 +15,6 @@ management:
   endpoint:
     gateway:
       enabled: true
-  endpoint:
-    gateway:
-      enabled: true
 
 logging:
   level:
