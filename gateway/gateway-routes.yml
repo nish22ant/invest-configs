@@ -18,5 +18,5 @@ spring:
           uri: lb://address-service
           predicates:
             - Path=/api/v1/address
-            filters:
-              - RemoveRequestHeader=Cookie
+          filters:
+            - RemoveRequestHeader=Cookie
