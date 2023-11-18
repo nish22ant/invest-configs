@@ -12,9 +12,11 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/api/v1/users
-            filters:
-              - RemoveRequestHeader=Cookie
+          filters:
+            - RemoveRequestHeader=Cookie
         - id: address-service
           uri: lb://address-service
           predicates:
             - Path=/api/v1/address
+          filters:
+            - RemoveRequestHeader=Cookie
